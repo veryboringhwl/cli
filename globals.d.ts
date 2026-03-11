@@ -756,11 +756,11 @@ declare namespace Spicetify {
 			/**
 			 * Add an item to sub items list
 			 */
-			addItem(item: Item);
+			addItem(item: Item): void;
 			/**
 			 * Remove an item from sub items list
 			 */
-			removeItem(item: Item);
+			removeItem(item: Item): void;
 			/**
 			 * SubMenu is only available in Profile menu when method "register" is called.
 			 */
@@ -1294,9 +1294,10 @@ declare namespace Spicetify {
 			title: string;
 			/**
 			 * You can specify a string for simple text display
-			 * or a HTML element for interactive config/setting menu
+			 * or a HTML element for interactive config/setting menu,
+			 * or a React JSX element for React-based components
 			 */
-			content: string | Element;
+			content: string | Element | React.JSX.Element;
 			/**
 			 * Bigger window
 			 */
@@ -1696,13 +1697,13 @@ declare namespace Spicetify {
 			 * Values from the colorSet will be pasted into the CSS.
 			 */
 			UNSAFE_colorSet?: ColorSetBody;
-			onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
-			onMouseEnter?: (event: MouseEvent<HTMLButtonElement>) => void;
-			onMouseLeave?: (event: MouseEvent<HTMLButtonElement>) => void;
-			onMouseDown?: (event: MouseEvent<HTMLButtonElement>) => void;
-			onMouseUp?: (event: MouseEvent<HTMLButtonElement>) => void;
-			onFocus?: (event: FocusEvent<HTMLButtonElement>) => void;
-			onBlur?: (event: FocusEvent<HTMLButtonElement>) => void;
+			onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+			onMouseEnter?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+			onMouseLeave?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+			onMouseDown?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+			onMouseUp?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+			onFocus?: (event: React.FocusEvent<HTMLButtonElement>) => void;
+			onBlur?: (event: React.FocusEvent<HTMLButtonElement>) => void;
 		};
 		/**
 		 * Generic context menu provider
