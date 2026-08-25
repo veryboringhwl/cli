@@ -4,12 +4,12 @@
   "type": "module",
   "scripts": {
     "build:wrapper": "node scripts/build-wrapper.mjs",
+    "build:modular-loader": "node scripts/build-modular-loader.mjs",
+    "build:payload": "node scripts/build-payload.mjs",
     "check:wrapper": "node scripts/build-wrapper.mjs --check",
     "fmt": "oxfmt scripts src/jsHelper/spicetifyWrapper package.json .oxfmtrc.json .oxlintrc.json",
     "fmt:check": "oxfmt --check scripts src/jsHelper/spicetifyWrapper package.json .oxfmtrc.json .oxlintrc.json",
-    "lint": "oxlint .",
-    "build:modular-loader": "node scripts/build-modular-loader.mjs",
-    "build:payload": "node scripts/build-payload.mjs"
+    "lint": "oxlint ."
   },
   "devDependencies": {
     "esbuild": "0.25.11",

@@ -2,7 +2,7 @@ import { build } from "esbuild";
 import { resolve } from "node:path";
 
 const root = process.cwd();
-const entryFile = resolve(root, "src/jsHelper/modularLoader/index.ts");
+const entryFile = resolve(root, "js/modularLoader/index.ts");
 const outputFile = resolve(root, "jsHelper/modularLoader.js");
 
 const result = await build({

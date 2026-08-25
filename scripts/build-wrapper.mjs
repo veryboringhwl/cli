@@ -3,7 +3,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { relative, resolve } from "node:path";
 
 const root = process.cwd();
-const entryFile = resolve(root, "src/jsHelper/spicetifyWrapper/index.js");
+const entryFile = resolve(root, "js/spicetifyWrapper/index.js");
 const outputFile = resolve(root, "jsHelper/spicetifyWrapper.js");
 const outputMapFile = `${outputFile}.map`;
 const checkOnly = process.argv.includes("--check");

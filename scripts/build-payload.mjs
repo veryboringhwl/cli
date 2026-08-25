@@ -12,14 +12,14 @@ const outDir = resolve(root, process.argv[2] ?? "dist/hooks");
 
 const targets = [
   {
-    entry: resolve(root, "src/jsHelper/spicetifyWrapper/index.js"),
+    entry: resolve(root, "js/spicetifyWrapper/index.js"),
     out: resolve(outDir, "spicetifyWrapper.js"),
     // Literals that must survive minification, proving the bundle kept the
     // surface the client depends on.
     needles: ["Spicetify"],
   },
   {
-    entry: resolve(root, "src/jsHelper/modularLoader/index.ts"),
+    entry: resolve(root, "js/modularLoader/index.ts"),
     out: resolve(outDir, "modularLoader.js"),
     needles: ["spicetify.modules.local.", "[modular-loader]", "/modules/manifest.json", "/xpui-modules.js"],
   },
